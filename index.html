@@ -24,6 +24,8 @@ body{
 font-family:'Inter',sans-serif;
 background:#f4f4f8;
 color:#111;
+transition:opacity .45s ease;
+overflow-x:hidden;
 }
 
 body::before{
@@ -566,6 +568,16 @@ transform:rotate(360deg);
 }
 }
 
+@media(max-width:768px){
+.menu{gap:14px;}
+.navbar{padding:14px 16px;}
+.navbtn{height:42px;padding:0 14px;}
+.tabs{gap:18px;overflow-x:auto;}
+.social{flex-direction:column;}
+.cardbox{padding:22px;}
+.buybtn{height:58px;font-size:18px;}
+}
+
 </style>
 
 
@@ -678,26 +690,27 @@ BELI TIKET SEKARANG
 
 <script>
 
+function smoothRedirect(url){
+document.body.style.opacity='0';
+setTimeout(function(){
+window.location.href=url;
+},450);
+}
+
+document.querySelector('.navbtn').addEventListener('click',function(){
+smoothRedirect('tiket.html');
+});
+
 document.getElementById('buyBtn').addEventListener('click',function(){
 
 let btn=this;
 
 btn.classList.add('loading');
-
 btn.innerHTML='Memproses Pesanan';
 
 setTimeout(function(){
-
-window.location.href='tiket.html';
-
-/*
-ganti tiket.html dengan link pembayaran Anda
-contoh:
-
-window.location.href='https://linkanda.com';
-*/
-
-},10000);
+smoothRedirect('tiket.html');
+},1500);
 
 });
 
