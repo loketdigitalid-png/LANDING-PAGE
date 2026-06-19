@@ -57,6 +57,17 @@ $("jenisTiket").textContent=jenisTiket;
 
 document.getElementById('lanjut').onclick=function(){
 
+if(!$('nama').value.trim()){alert('Nama wajib diisi');return;}
+if(!$('identitas').value){alert('Pilih identitas');return;}
+if(!$('nomorId').value.trim()){alert('Nomor identitas wajib diisi');return;}
+if(!$('email').value.trim()){alert('Email wajib diisi');return;}
+if(!$('wa').value.trim()){alert('No WhatsApp wajib diisi');return;}
+if(!$('alamat').value.trim()){alert('Alamat wajib diisi');return;}
+if(!$('setuju1').checked || !$('setuju2').checked){
+alert('Centang seluruh persetujuan');
+return;
+}
+
 localStorage.setItem('nama',$('nama').value);
 localStorage.setItem('identitas',$('identitas').value);
 localStorage.setItem('nomorIdentitas',$('nomorId').value);
@@ -64,6 +75,8 @@ localStorage.setItem('email',$('email').value);
 localStorage.setItem('wa',$('wa').value);
 localStorage.setItem('alamat',$('alamat').value);
 
+document.body.style.opacity='0';
+document.body.style.transition='opacity .45s ease';
 document.getElementById('loading').style.display='flex';
 
 setTimeout(function(){
