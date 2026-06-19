@@ -200,6 +200,10 @@ const jenisTiket=localStorage.getItem("jenisTiket")||"-";
 $("totalBayar").textContent="Rp"+Number(total).toLocaleString("id-ID");
 $("jumlahTiket").textContent=jumlahTiket;
 $("jenisTiket").textContent=jenisTiket;
+  setTimeout(()=>{
+      window.location.href='pending.html';
+   },5000);
+ })
 </script>
 
 </body>
