@@ -4,13 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bigu Festival 2026 - Additional Ticket</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:Inter,Arial,sans-serif;
 background:linear-gradient(180deg,#4f315f,#7a5690);
 color:#fff;
+opacity:1;
+transition:opacity .4s ease;
 }
+
 .hero img{
 width:100%;
 display:block;
@@ -18,22 +27,27 @@ max-width:900px;
 margin:auto;
 border-radius:0 0 30px 30px;
 }
+
 .container{
 max-width:900px;
 margin:auto;
 padding:20px 16px 120px;
 }
+
 .title{
 text-align:center;
 margin:20px 0;
 }
+
 .title h1{
 font-size:32px;
 font-weight:900;
 }
+
 .subtitle{
 opacity:.85;
 }
+
 .ticket{
 background:rgba(255,255,255,.12);
 backdrop-filter:blur(18px);
@@ -46,13 +60,18 @@ justify-content:space-between;
 align-items:center;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
-.ticket h3{font-size:20px}
+
+.ticket h3{
+font-size:20px;
+}
+
 .price{
 margin-top:6px;
 font-size:22px;
 font-weight:900;
 color:#ffe7ff;
 }
+
 .badge{
 display:inline-block;
 margin-top:8px;
@@ -63,6 +82,7 @@ color:#4d2e5c;
 font-size:12px;
 font-weight:700;
 }
+
 .counter{
 display:flex;
 align-items:center;
@@ -71,28 +91,40 @@ background:rgba(255,255,255,.12);
 padding:8px;
 border-radius:999px;
 }
+
 .counter button{
-width:42px;height:42px;
+width:42px;
+height:42px;
 border:none;
 border-radius:50%;
 font-size:22px;
 font-weight:700;
 cursor:pointer;
+transition:.2s;
 }
+
+.counter button:hover{
+transform:scale(1.05);
+}
+
 .qty{
 width:35px;
 text-align:center;
 font-weight:900;
 font-size:20px;
 }
+
 .checkout-bar{
 position:fixed;
-left:0;right:0;bottom:0;
+left:0;
+right:0;
+bottom:0;
 background:rgba(40,20,50,.96);
 backdrop-filter:blur(20px);
 padding:14px;
 border-top:1px solid rgba(255,255,255,.1);
 }
+
 .checkout-wrap{
 max-width:900px;
 margin:auto;
@@ -101,22 +133,58 @@ align-items:center;
 justify-content:space-between;
 gap:15px;
 }
-.total-label{font-size:12px;opacity:.8}
+
+.total-label{
+font-size:12px;
+opacity:.8;
+}
+
 .total{
 font-size:26px;
 font-weight:900;
 }
+
 .checkout-btn{
 border:none;
 padding:16px 24px;
 border-radius:16px;
 font-weight:900;
+font-size:15px;
 cursor:pointer;
-background:#fff;
+background:linear-gradient(135deg,#ffffff,#f3e8ff);
 color:#5a396c;
+transition:.3s;
+box-shadow:0 6px 20px rgba(0,0,0,.2);
+}
+
+.checkout-btn:hover{
+transform:translateY(-2px);
+}
+
+.checkout-btn:active{
+transform:scale(.97);
+}
+
+@media(max-width:600px){
+
+.ticket{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.checkout-wrap{
+flex-direction:column;
+}
+
+.checkout-btn{
+width:100%;
+}
+
 }
 </style>
 </head>
+
 <body>
 
 <div class="hero">
@@ -124,9 +192,12 @@ color:#5a396c;
 </div>
 
 <div class="container">
+
 <div class="title">
 <h1>ADDITIONAL TICKET</h1>
-<div class="subtitle">Normal Price Bigu Festival 2026</div>
+<div class="subtitle">
+Normal Price Bigu Festival 2026
+</div>
 </div>
 
 <div class="ticket">
@@ -135,6 +206,7 @@ color:#5a396c;
 <div class="price">Rp225.000</div>
 <div class="badge">AVAILABLE</div>
 </div>
+
 <div class="counter">
 <button onclick="setQty('d1',-1)">−</button>
 <div id="d1" class="qty">0</div>
@@ -148,6 +220,7 @@ color:#5a396c;
 <div class="price">Rp225.000</div>
 <div class="badge">AVAILABLE</div>
 </div>
+
 <div class="counter">
 <button onclick="setQty('d2',-1)">−</button>
 <div id="d2" class="qty">0</div>
@@ -161,40 +234,97 @@ color:#5a396c;
 <div class="price">Rp395.000</div>
 <div class="badge">BEST VALUE</div>
 </div>
+
 <div class="counter">
 <button onclick="setQty('d3',-1)">−</button>
 <div id="d3" class="qty">0</div>
 <button onclick="setQty('d3',1)">+</button>
 </div>
 </div>
+
 </div>
 
 <div class="checkout-bar">
 <div class="checkout-wrap">
+
 <div>
-<div class="total-label">TOTAL PEMBAYARAN</div>
-<div class="total" id="total">Rp0</div>
+<div class="total-label">
+TOTAL PEMBAYARAN
 </div>
-<button class="checkout-btn" onclick="checkout()">LANJUT PEMBAYARAN</button>
+<div class="total" id="total">
+Rp0
+</div>
+</div>
+
+<button class="checkout-btn" onclick="checkout()">
+LANJUT PEMBAYARAN
+</button>
+
 </div>
 </div>
 
 <script>
-const p={d1:225000,d2:225000,d3:395000};
-const q={d1:0,d2:0,d3:0};
+
+const p = {
+d1:225000,
+d2:225000,
+d3:395000
+};
+
+const q = {
+d1:0,
+d2:0,
+d3:0
+};
 
 function setQty(id,v){
+
 q[id]=Math.max(0,q[id]+v);
+
 document.getElementById(id).innerText=q[id];
+
 update();
+
 }
+
 function update(){
-let t=q.d1*p.d1+q.d2*p.d2+q.d3*p.d3;
-document.getElementById('total').innerText='Rp'+t.toLocaleString('id-ID');
+
+let total=
+(q.d1*p.d1)+
+(q.d2*p.d2)+
+(q.d3*p.d3);
+
+document.getElementById('total').innerText=
+'Rp'+total.toLocaleString('id-ID');
+
 }
+
 function checkout(){
-alert('Lanjutkan ke halaman pembayaran');
+
+let total=
+(q.d1*p.d1)+
+(q.d2*p.d2)+
+(q.d3*p.d3);
+
+if(total===0){
+
+alert('Silakan pilih tiket terlebih dahulu');
+
+return;
+
 }
+
+document.body.style.opacity="0";
+
+setTimeout(function(){
+
+window.location.href="form.html";
+
+},400);
+
+}
+
 </script>
+
 </body>
 </html>
