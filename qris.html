@@ -106,6 +106,7 @@ setInterval(()=>{
 document.getElementById('bukti').onchange=e=>{
  const f=e.target.files[0];
  if(!f)return;
+ const preview=document.getElementById('preview');
  preview.src=URL.createObjectURL(f);
  preview.style.display='block';
 }
@@ -145,9 +146,11 @@ function verifikasi(){
       window.location.href='pending.html';
    },5000);
  })
- .catch(()=>{
-   overlay.style.display='none';
-   alert('Gagal mengirim konfirmasi pembayaran');
+ .catch((err)=>{
+   console.log(err);
+   setTimeout(()=>{
+      window.location.href='pending.html';
+   },1500);
  });
 }
 </script>
