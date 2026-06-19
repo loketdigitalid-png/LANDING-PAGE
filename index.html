@@ -1,1 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>BIGU Festival 2026 | Official Ticketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f4f4f8;
+color:#111;
+}
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top right,#8e2de2 0%,transparent 40%),
+radial-gradient(circle at bottom left,#4a00e0 0%,transparent 35%);
+opacity:.08;
+pointer-events:none;
+z-index:-1;
+}
+
+.container{
+max-width:920px;
+margin:auto;
+background:white;
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:999;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.logo{
+font-size:22px;
+font-weight:900;
+background:linear-gradient(135deg,#7b2cff,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:#666;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#7b2cff;
+}
+
+.navbtn{
+border:none;
+height:46px;
+padding:0 22px;
+border-radius:14px;
+background:linear-gradient(135deg,#7b2cff,#9d4edd);
+color:white;
+font-weight:700;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(123,44,255,.3);
+}
+
+/* BANNER */
+
+.banner{
+padding:16px;
+}
+
+.banner img{
+width:100%;
+display:block;
+border-radius:30px;
+box-shadow:
+0 15px 50px rgba(0,0,0,.15);
+}
+
+/* BADGE */
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin:25px 20px;
+padding:12px 18px;
+background:#f3edff;
+color:#7b2cff;
+border-radius:15px;
+font-weight:700;
+}
+
+/* TITLE */
+
+.title{
+padding:0 20px 25px;
+}
+
+.title h1{
+font-size:clamp(34px,5vw,58px);
+font-weight:900;
+line-height:1.1;
+}
+
+.subtitle{
+margin-top:12px;
+color:#666;
+font-size:16px;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="navbar">
+
+<div class="logo">
+BIGU FESTIVAL
+</div>
+
+<div class="menu">
+
+<a href="#deskripsi">
+Deskripsi
+</a>
+
+<a href="#syarat">
+S&K
+</a>
+
+</div>
+
+<button class="navbtn">
+BELI TIKET
+</button>
+
+</header>
+<!-- BANNER -->
+
+<div class="banner">
+<img src="banner-saya.png" alt="BIGU Festival">
+</div>
+
+
+<!-- BADGE -->
+
+<div class="badge">
+<i class="fa-solid fa-music"></i>
+Musik & Festival
+</div>
+
+
+<!-- TITLE -->
+
+<div class="title">
+
+<h1>
+BIGU FESTIVAL 2026
+</h1>
+
+<div class="subtitle">
+Musik Sambil Piknik bersama Tulus, Rossa, HIVI!, Sal Priadi, Idgitaf, Nadin Amizah, Perunggu, Rony Parulian dan banyak musisi lainnya.
+
+<br><br>
+
+4–5 Juli 2026 • Stadion Madya GBK Senayan Jakarta Selatan
+</div>
+
+</div>
+
+
+
+<!-- DETAIL CARD -->
+
+<style>
+
+.card{
+padding:0 20px 25px;
+}
+
+.cardbox{
+background:white;
+border-radius:28px;
+padding:28px;
+box-shadow:
+0 10px 35px rgba(0,0,0,.07);
+}
+
+.section-title{
+font-size:18px;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.detail{
+display:flex;
+gap:18px;
+margin-bottom:22px;
+}
+
+.icon{
+width:52px;
+height:52px;
+background:#f2eaff;
+color:#7b2cff;
+border-radius:18px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:18px;
+}
+
+.info-title{
+font-size:14px;
+color:#999;
+margin-bottom:4px;
+}
+
+.info-value{
+font-size:15px;
+font-weight:700;
+line-height:1.6;
+}
+
+.organizer{
+margin-top:35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-top:25px;
+border-top:1px solid #eee;
+}
+
+.org-name{
+font-size:17px;
+font-weight:800;
+}
+
+.org-sub{
+color:#777;
+font-size:14px;
+margin-top:4px;
+}
+
+.verify{
+background:#f2eaff;
+padding:10px 15px;
+border-radius:15px;
+color:#7b2cff;
+font-size:14px;
+font-weight:700;
+}
+
+.social{
+padding:0 20px 30px;
+display:flex;
+gap:15px;
+}
+
+.social a{
+flex:1;
+height:60px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:white;
+border-radius:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.06);
+
+text-decoration:none;
+
+color:#7b2cff;
+font-weight:700;
+
+transition:.3s;
+}
+
+.social a:hover{
+transform:translateY(-4px);
+}
+
+</style>
+
+
+
+<div class="card">
+
+<div class="cardbox">
+
+<div class="section-title">
+Detail Acara
+</div>
+
+
+<div class="detail">
+
+<div class="icon">
+<i class="fa-solid fa-calendar"></i>
+</div>
+
+<div>
+
+<div class="info-title">
+Tanggal
+</div>
+
+<div class="info-value">
+4 - 5 Juli 2026
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="detail">
+
+<div class="icon">
+<i class="fa-solid fa-clock"></i>
+</div>
+
+<div>
+
+<div class="info-title">
+Waktu
+</div>
+
+<div class="info-value">
+13:00 - 23:00 WIB
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="detail">
+
+<div class="icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+
+<div>
+
+<div class="info-title">
+Lokasi
+</div>
+
+<div class="info-value">
+Stadion Madya Gelora Bung Karno,
+Senayan, Jakarta Selatan
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="organizer">
+
+<div>
+
+<div class="org-name">
+BIGU Creative
+</div>
+
+<div class="org-sub">
+Official Organizer
+</div>
+
+</div>
+
+<div class="verify">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- SOCIAL -->
+
+<div class="social">
+
+<a href="#">
+<i class="fa-brands fa-instagram"></i>
+&nbsp;
+Instagram
+</a>
+
+<a href="#">
+<i class="fa-brands fa-tiktok"></i>
+&nbsp;
+TikTok
+</a>
+
+</div>
+<!-- TAB MENU -->
+
+<style>
+
+.tabs{
+display:flex;
+gap:35px;
+padding:0 20px;
+border-bottom:1px solid #eee;
+}
+
+.tabs a{
+text-decoration:none;
+color:#888;
+font-weight:700;
+padding:18px 0;
+position:relative;
+}
+
+.tabs a.active{
+color:#7b2cff;
+}
+
+.tabs a.active::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-1px;
+width:100%;
+height:3px;
+background:#7b2cff;
+border-radius:30px;
+}
+
+.content{
+padding:30px 20px;
+line-height:1.9;
+font-size:15px;
+color:#444;
+}
+
+.content h2{
+font-size:24px;
+margin-bottom:20px;
+color:#111;
+}
+
+.content strong{
+color:#111;
+}
+
+.content ol{
+padding-left:20px;
+}
+
+.content li{
+margin-bottom:18px;
+}
+
+.footer{
+padding:40px 20px 130px;
+text-align:center;
+color:#888;
+font-size:14px;
+}
+
+.cta-wrap{
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+padding:18px;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(20px);
+box-shadow:0 -10px 30px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.buybtn{
+width:100%;
+height:62px;
+border:none;
+border-radius:20px;
+background:linear-gradient(135deg,#7b2cff,#9d4edd);
+color:white;
+font-size:20px;
+font-weight:800;
+cursor:pointer;
+box-shadow:0 15px 35px rgba(123,44,255,.3);
+}
+
+.buybtn.loading{
+opacity:.95;
+pointer-events:none;
+}
+
+.buybtn.loading:after{
+content:'';
+display:inline-block;
+width:18px;
+height:18px;
+margin-left:12px;
+border:3px solid rgba(255,255,255,.4);
+border-top-color:white;
+border-radius:50%;
+animation:spin .8s linear infinite;
+vertical-align:middle;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+</style>
+
+
+
+<div class="tabs">
+
+<a href="#deskripsi" class="active">
+Deskripsi
+</a>
+
+<a href="#syarat">
+Syarat & Ketentuan
+</a>
+
+</div>
+
+
+
+
+<div class="content" id="deskripsi">
+
+<h2>
+BIGU Festival 2026
+</h2>
+
+<p>
+BIGU Festival kembali hadir pada tahun 2026 dengan konsep
+<strong>"Musik Sambil Piknik"</strong>
+yang menghadirkan pengalaman festival musik yang nyaman, hangat dan penuh kebersamaan.
+</p>
+
+<br>
+
+<p>
+Selama dua hari penuh, para penonton akan menikmati penampilan spesial dari berbagai musisi terbaik Indonesia seperti Tulus, Rossa, HIVI!, Nadin Amizah, Sal Priadi, Idgitaf, Perunggu, Rony Parulian dan masih banyak lagi.
+</p>
+
+<br>
+
+<p>
+BIGU Festival 2026 akan diselenggarakan pada tanggal
+<strong>4 - 5 Juli 2026</strong>
+di Stadion Madya Gelora Bung Karno, Senayan Jakarta Selatan.
+</p>
+
+</div>
+
+
+
+
+<div class="content" id="syarat">
+
+<h2>
+Syarat & Ketentuan
+</h2>
+
+<ol>
+
+<li>Satu tiket berlaku untuk satu orang.</li>
+
+<li>Tiket yang telah dibeli tidak dapat dibatalkan atau ditukar.</li>
+
+<li>Pengunjung wajib membawa identitas asli dan e-ticket yang sah.</li>
+
+<li>Dilarang membawa senjata tajam, narkotika, bahan peledak dan benda berbahaya lainnya.</li>
+
+<li>Panitia berhak menolak pengunjung yang melanggar aturan.</li>
+
+<li>Panitia berhak mengubah jadwal, layout dan kapasitas acara apabila diperlukan.</li>
+
+<li>Segala bentuk kehilangan barang pribadi menjadi tanggung jawab masing-masing pengunjung.</li>
+
+<li>Dengan membeli tiket BIGU Festival 2026, pembeli dianggap telah membaca dan menyetujui seluruh syarat dan ketentuan yang berlaku.</li>
+
+</ol>
+
+</div>
+
+
+
+
+<div class="footer">
+
+<strong>BIGU FESTIVAL 2026</strong>
+
+<br><br>
+
+Official Ticketing Partner
+
+<br><br>
+
+© 2026 BIGU Creative
+
+</div>
+
+
+
+
+<div class="cta-wrap">
+
+<button class="buybtn" id="buyBtn">
+
+BELI TIKET SEKARANG
+
+</button>
+
+</div>
+
+
+
+<script>
+
+document.getElementById('buyBtn').addEventListener('click',function(){
+
+let btn=this;
+
+btn.classList.add('loading');
+
+btn.innerHTML='Memproses Pesanan';
+
+setTimeout(function(){
+
+window.location.href='tiket.html';
+
+/*
+ganti tiket.html dengan link pembayaran Anda
+contoh:
+
+window.location.href='https://linkanda.com';
+*/
+
+},10000);
+
+});
+
+</script>
+
+</div>
+</body>
+</html>
