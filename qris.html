@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -17,8 +16,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:
-linear-gradient(135deg,#081225,#101b35,#1c0f37);
+background:linear-gradient(135deg,#081225,#101b35,#1c0f37);
 color:#fff;
 padding:20px;
 min-height:100vh;
@@ -33,18 +31,11 @@ margin:auto;
 margin-top:20px;
 padding:28px;
 border-radius:30px;
-background:
-rgba(255,255,255,.06);
-
+background:rgba(255,255,255,.06);
 border:1px solid rgba(255,255,255,.10);
-
 backdrop-filter:blur(20px);
-
-box-shadow:
-0 0 40px rgba(0,0,0,.25);
+box-shadow:0 0 40px rgba(0,0,0,.25);
 }
-
-/* HEADER */
 
 .header{
 text-align:center;
@@ -54,7 +45,6 @@ margin-bottom:30px;
 .logo{
 font-size:32px;
 font-weight:800;
-letter-spacing:1px;
 }
 
 .sub{
@@ -62,8 +52,6 @@ margin-top:8px;
 font-size:14px;
 color:#b7c8e8;
 }
-
-/* TIMER */
 
 .timer{
 font-size:52px;
@@ -94,10 +82,7 @@ color:#ff6b6b;
 
 .alert.show{
 display:block;
-animation:pulse .8s infinite;
 }
-
-/* GRID */
 
 .info{
 display:grid;
@@ -107,15 +92,10 @@ margin-top:25px;
 }
 
 .item{
-background:
-rgba(255,255,255,.05);
-
+background:rgba(255,255,255,.05);
 padding:16px;
-
 border-radius:18px;
-
-border:
-1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.08);
 }
 
 .label{
@@ -128,8 +108,6 @@ margin-top:8px;
 font-size:16px;
 font-weight:700;
 }
-
-/* QR BOX */
 
 .qrbox{
 margin-top:25px;
@@ -153,73 +131,41 @@ color:#00e5ff;
 text-align:center;
 }
 
-/* BUTTON */
-
 .copybtn,
 .btn{
-
 width:100%;
-
 padding:18px;
-
 border:none;
-
 border-radius:18px;
-
 font-size:16px;
-
 font-weight:700;
-
 cursor:pointer;
-
 transition:.3s;
 }
 
 .copybtn{
-
 background:#22375c;
-
 color:white;
-
 margin-top:20px;
 }
 
-.copybtn:hover{
-transform:translateY(-2px);
-}
-
 .btn{
-
 margin-top:18px;
-
-background:
-linear-gradient(135deg,#00c8ff,#008cff);
-
+background:linear-gradient(135deg,#00c8ff,#008cff);
 color:white;
-
-box-shadow:
-0 10px 30px rgba(0,140,255,.3);
 }
 
+.copybtn:hover,
 .btn:hover{
 transform:translateY(-3px);
 }
 
-/* UPLOAD */
-
 .uploadbox{
-
 margin-top:25px;
-
 border:2px dashed rgba(255,255,255,.25);
-
 padding:30px;
-
 border-radius:25px;
-
-background:
-rgba(255,255,255,.04);
-
+background:rgba(255,255,255,.04);
 text-align:center;
 }
 
@@ -234,131 +180,78 @@ line-height:30px;
 }
 
 .preview{
-
 display:none;
-
 width:100%;
-
 max-width:320px;
-
 margin:auto;
-
 margin-top:20px;
-
 border-radius:18px;
 }
 
-/* CHECKBOX */
-
 .check{
-
 margin-top:20px;
-
 display:flex;
-
 gap:10px;
-
 align-items:center;
 }
 
-/* OVERLAY */
-
 #overlay{
-
 display:none;
-
 position:fixed;
-
 inset:0;
-
-background:
-rgba(0,0,0,.92);
-
+background:rgba(0,0,0,.92);
 backdrop-filter:blur(20px);
-
 justify-content:center;
-
 align-items:center;
-
 flex-direction:column;
-
 z-index:99999;
 }
 
 .spin{
-
 width:95px;
-
 height:95px;
-
 border-radius:50%;
-
 border:8px solid rgba(255,255,255,.15);
-
 border-top:8px solid #00e5ff;
-
 animation:putar 1s linear infinite;
 }
 
 @keyframes putar{
-
 100%{
 transform:rotate(360deg);
 }
-
 }
 
 .loading-title{
-
 margin-top:30px;
-
 font-size:28px;
-
 font-weight:700;
 }
 
 #status{
-
 margin-top:18px;
-
 font-size:18px;
-
 line-height:34px;
-
 text-align:center;
-
 color:#d7d7d7;
 }
 
 .progress{
-
 width:320px;
-
 height:10px;
-
 margin-top:25px;
-
-background:
-rgba(255,255,255,.12);
-
+background:rgba(255,255,255,.12);
 border-radius:100px;
-
 overflow:hidden;
 }
 
 .bar{
-
 width:0;
-
 height:100%;
-
-background:
-linear-gradient(90deg,#00e5ff,#00a3ff);
-
+background:linear-gradient(90deg,#00e5ff,#00a3ff);
 }
 
 @media(max-width:768px){
-
 .info{
 grid-template-columns:1fr;
 }
@@ -370,125 +263,64 @@ font-size:42px;
 .logo{
 font-size:26px;
 }
-
 }
-
 </style>
 </head>
 <body>
 
 <div class="wrap">
-
 <div class="card">
 
 <div class="header">
-
-<div class="logo">
-BIGU FESTIVAL 2026
+<div class="logo">BIGU FESTIVAL 2026</div>
+<div class="sub">QRIS Payment Gateway</div>
 </div>
 
-<div class="sub">
-QRIS Payment Gateway
-</div>
-
-</div>
-
-
-<!-- TIMER -->
-
-<div class="timer" id="payTimer">
-02:00
-</div>
+<div class="timer" id="payTimer">02:00</div>
 
 <div class="alert" id="warn">
 ⚠ SEGERA SELESAIKAN PEMBAYARAN
 </div>
 
-
-<!-- INFORMASI PEMBELI -->
-
 <div class="info">
 
 <div class="item">
-<div class="label">
-Nama Pemesan
+<div class="label">Nama Pemesan</div>
+<div class="value" id="nama">-</div>
 </div>
-
-<div class="value" id="nama">
--
-</div>
-</div>
-
 
 <div class="item">
-<div class="label">
-Jumlah Tiket
+<div class="label">Jumlah Tiket</div>
+<div class="value" id="jumlah">0</div>
 </div>
-
-<div class="value" id="jumlah">
-0
-</div>
-</div>
-
 
 <div class="item">
-<div class="label">
-Jenis Tiket
+<div class="label">Jenis Tiket</div>
+<div class="value" id="jenis">-</div>
 </div>
-
-<div class="value" id="jenis">
--
-</div>
-</div>
-
 
 <div class="item">
-<div class="label">
-Total Pembayaran
-</div>
-
-<div class="value" id="totalInfo">
-Rp0
-</div>
+<div class="label">Total Pembayaran</div>
+<div class="value" id="totalInfo">Rp0</div>
 </div>
 
 </div>
-
-
-<!-- QRIS -->
 
 <div class="qrbox">
-
-<img src="qris-pembayaran1.jpg">
-
+<img src="qris-pembayaran1.jpg" alt="QRIS">
 </div>
 
-
-<div class="total" id="total">
-Rp0
-</div>
-
+<div class="total" id="total">Rp0</div>
 
 <button class="copybtn" onclick="copyNominal()">
 📋 Salin Nominal Pembayaran
 </button>
 
-
-
-<!-- UPLOAD BUKTI -->
-
 <div class="uploadbox">
-
 <label for="bukti">
-
 📤 Upload Bukti Pembayaran
-
 <br>
-
-<small>
-Klik untuk memilih gambar
-</small>
-
+<small>Klik untuk memilih gambar</small>
 </label>
 
 <input
@@ -496,110 +328,78 @@ type="file"
 id="bukti"
 accept="image/*">
 
-<img
-id="preview"
-class="preview">
-
+<img id="preview" class="preview">
 </div>
-
-
-
-<!-- CHECKBOX -->
 
 <div class="check">
-
-<input
-type="checkbox"
-id="agree">
-
+<input type="checkbox" id="agree">
 <label for="agree">
-
 Saya telah melakukan pembayaran
-
 </label>
-
 </div>
 
-
-
 <button class="btn" onclick="verifikasi()">
-
 KONFIRMASI PEMBAYARAN
-
 </button>
 
 </div>
-
 </div>
-
-
-
-<!-- OVERLAY PREMIUM -->
 
 <div id="overlay">
 
 <div class="spin"></div>
 
 <div class="loading-title">
-
 Memverifikasi Pembayaran
-
 </div>
 
 <div id="status">
-
 Mohon tunggu...
-
 </div>
-
 
 <div class="progress">
-
 <div class="bar" id="bar"></div>
-
 </div>
 
 </div>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
 
+/* GANTI DENGAN PUBLIC KEY EMAILJS */
 emailjs.init("API_KEY_ANDA");
 
-const nama =
-localStorage.getItem('nama') || '-';
+/* AMBIL DATA LOCALSTORAGE */
 
-const jenis =
-localStorage.getItem('jenisTiket') || '-';
+const nama = localStorage.getItem('nama') || '-';
+const jenis = localStorage.getItem('jenisTiket') || '-';
+const jumlah = localStorage.getItem('jumlahTiket') || '0';
+const total = localStorage.getItem('totalPembayaran') || '0';
 
-const jumlah =
-localStorage.getItem('jumlahTiket') || '0';
+document.getElementById('nama').textContent = nama;
+document.getElementById('jenis').textContent = jenis;
+document.getElementById('jumlah').textContent = jumlah;
 
-const total =
-localStorage.getItem('totalPembayaran') || '0';
-
-
-document.getElementById('nama').innerText = nama;
-
-document.getElementById('jenis').innerText = jenis;
-
-document.getElementById('jumlah').innerText = jumlah;
-
-document.getElementById('total').innerText =
+document.getElementById('total').textContent =
 'Rp' + Number(total).toLocaleString('id-ID');
 
-document.getElementById('totalInfo').innerText =
+document.getElementById('totalInfo').textContent =
 'Rp' + Number(total).toLocaleString('id-ID');
 
+/* DEBUG LOCAL STORAGE */
 
+console.log("nama =", localStorage.getItem('nama'));
+console.log("jenisTiket =", localStorage.getItem('jenisTiket'));
+console.log("jumlahTiket =", localStorage.getItem('jumlahTiket'));
+console.log("totalPembayaran =", localStorage.getItem('totalPembayaran'));
+
+/* TIMER */
 
 let t = 120;
 
 const timer =
 document.getElementById('payTimer');
-
 
 setInterval(()=>{
 
@@ -608,16 +408,14 @@ if(t>0){
 t--;
 
 let m=Math.floor(t/60);
-
 let s=t%60;
 
-timer.innerText =
+timer.textContent =
 String(m).padStart(2,'0')
 +
 ':'
 +
 String(s).padStart(2,'0');
-
 
 if(t<=10){
 
@@ -634,75 +432,86 @@ document
 
 },1000);
 
+/* PREVIEW BUKTI */
 
+document.getElementById('bukti').addEventListener('change',(e)=>{
 
-document.getElementById('bukti').onchange=e=>{
+const file=e.target.files[0];
 
-const f=e.target.files[0];
-
-if(!f) return;
+if(!file) return;
 
 const preview =
 document.getElementById('preview');
 
 preview.src =
-URL.createObjectURL(f);
+URL.createObjectURL(file);
 
 preview.style.display='block';
 
+});
+
+/* COPY NOMINAL */
+
+function copyNominal(){
+
+navigator.clipboard.writeText(total);
+
+alert('Nominal berhasil disalin');
+
 }
-}
+
+/* VERIFIKASI */
 
 function verifikasi(){
 
-const agree=document.getElementById('agree');
-const bukti=document.getElementById('bukti');
+const agree =
+document.getElementById('agree');
+
+const bukti =
+document.getElementById('bukti');
 
 if(!agree.checked){
+
 alert('Centang konfirmasi pembayaran terlebih dahulu');
+
 return;
+
 }
 
 if(!bukti.files.length){
+
 alert('Silakan upload bukti pembayaran');
+
 return;
+
 }
 
-const overlay=document.getElementById('overlay');
-const status=document.getElementById('status');
-const bar=document.getElementById('bar');
+const overlay =
+document.getElementById('overlay');
+
+const status =
+document.getElementById('status');
+
+const bar =
+document.getElementById('bar');
 
 overlay.style.display='flex';
-
 
 const dataEmail={
 
 nama:nama,
-
 email:localStorage.getItem('email')||'',
-
 wa:localStorage.getItem('wa')||'',
-
 identitas:localStorage.getItem('identitas')||'',
-
 nomorIdentitas:localStorage.getItem('nomorIdentitas')||'',
-
 alamat:localStorage.getItem('alamat')||'',
-
 jenis_tiket:jenis,
-
 jumlah_tiket:jumlah,
-
 totalPembayaran:total,
-
 metode_pembayaran:'QRIS',
-
 tanggal_transaksi:new Date().toLocaleString('id-ID')
 
 };
-
-
-/* KIRIM EMAIL */
 
 emailjs.send(
 'service_hpifg78',
@@ -716,30 +525,22 @@ console.log('Email berhasil dikirim');
 console.log(err);
 });
 
-
-/* ANIMASI LOADING 120 DETIK */
-
 let sisa=120;
 
 const pesan=[
 
 "Memvalidasi pembayaran...",
-
 "Memproses transaksi...",
-
 "Mengirim data tiket...",
-
 "Menyelesaikan verifikasi..."
 
 ];
 
 let idx=0;
 
-status.innerHTML=
-pesan[0]
-+
+status.innerHTML =
+pesan[0] +
 "<br><br>02:00";
-
 
 const proses=setInterval(()=>{
 
@@ -748,48 +549,28 @@ sisa--;
 let menit=Math.floor(sisa/60);
 let detik=sisa%60;
 
-status.innerHTML=
-pesan[idx]
-+
-"<br><br>"
-+
-String(menit).padStart(2,'0')
-+
-":"
-+
+status.innerHTML =
+pesan[idx] +
+"<br><br>" +
+String(menit).padStart(2,'0') +
+":" +
 String(detik).padStart(2,'0');
 
+bar.style.width =
+((120-sisa)/120*100) + "%";
 
-/* PROGRESS BAR */
-
-bar.style.width=
-((120-sisa)/120*100)
-+
-"%";
-
-
-if(sisa==90){
-idx=1;
-}
-
-if(sisa==60){
-idx=2;
-}
-
-if(sisa==30){
-idx=3;
-}
-
+if(sisa===90) idx=1;
+if(sisa===60) idx=2;
+if(sisa===30) idx=3;
 
 if(sisa<=0){
 
 clearInterval(proses);
 
-status.innerHTML=
+status.innerHTML =
 "✓ Pembayaran Berhasil Diverifikasi<br><br>Mengalihkan halaman...";
 
 bar.style.width="100%";
-
 
 setTimeout(()=>{
 
@@ -799,7 +580,6 @@ window.location.href="pending.html";
 
 }
 
-
 },1000);
 
 }
@@ -808,11 +588,3 @@ window.location.href="pending.html";
 
 </body>
 </html>
-
-function copyNominal(){
-
-navigator.clipboard.writeText(total);
-
-alert('Nominal berhasil disalin');
-
-}
