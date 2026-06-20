@@ -1,23 +1,219 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pending Verifikasi</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembelian Berhasil</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:radial-gradient(circle at top left, rgba(255,215,0,.12), transparent 35%),linear-gradient(135deg,#12051f,#2d0b45,#4c1d95,#7e22ce);color:#fff}
-.card{max-width:600px;width:100%;text-align:center;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:35px}
-.icon{font-size:70px;margin-bottom:15px}
-h1{color:#FFD700;margin-bottom:10px}
-.info{line-height:1.8;margin-top:15px}
-.badge{display:inline-block;background:rgba(255,215,0,.15);padding:10px 18px;border-radius:999px;margin:15px 0;color:#FFD700;font-weight:700}
-</style></head>
-<body><div class="card">
-<div class="icon">⏳</div>
-<h1>Pembayaran Sedang Diverifikasi</h1>
-<div class="badge">STATUS: PENDING</div>
-<div class="info">
-<p>Terima kasih. Bukti pembayaran telah berhasil dikirim.</p>
-<p>Tim kami akan melakukan verifikasi pembayaran Anda secepatnya.</p>
-<p>Mohon simpan Order ID dan tunggu konfirmasi melalui WhatsApp atau Email.</p>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(180deg,#23002e,#6a00b5);
+padding:25px;
+}
+
+.card{
+width:100%;
+max-width:700px;
+padding:55px 35px;
+border-radius:40px;
+background:linear-gradient(145deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.03));
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+box-shadow:
+0 0 40px rgba(185,0,255,.3);
+text-align:center;
+}
+
+.icon{
+width:120px;
+height:120px;
+margin:auto;
+background:#1fd55d;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:65px;
+box-shadow:0 0 30px rgba(31,213,93,.5);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.08);
+}
+100%{
+transform:scale(1);
+}
+}
+
+.title{
+margin-top:35px;
+font-size:56px;
+font-weight:800;
+color:#ffd400;
+line-height:1.2;
+}
+
+.status{
+display:inline-block;
+margin-top:35px;
+padding:18px 35px;
+background:rgba(255,255,255,.15);
+border-radius:50px;
+font-size:22px;
+font-weight:700;
+color:#ffd400;
+}
+
+.desc{
+margin-top:45px;
+color:white;
+font-size:22px;
+line-height:1.9;
+font-weight:300;
+}
+
+.note{
+margin-top:30px;
+color:#fff;
+font-size:20px;
+line-height:1.8;
+font-weight:500;
+}
+
+.email-box{
+margin-top:35px;
+background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.15);
+color:white;
+font-size:18px;
+line-height:1.8;
+}
+
+.button{
+margin-top:40px;
+display:inline-block;
+padding:18px 45px;
+border-radius:50px;
+background:#ffd400;
+color:#4b0082;
+font-weight:700;
+font-size:18px;
+text-decoration:none;
+transition:.3s;
+}
+
+.button:hover{
+transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.card{
+padding:45px 25px;
+border-radius:35px;
+}
+
+.icon{
+width:100px;
+height:100px;
+font-size:55px;
+}
+
+.title{
+font-size:40px;
+}
+
+.status{
+font-size:18px;
+padding:15px 28px;
+}
+
+.desc{
+font-size:18px;
+}
+
+.note{
+font-size:17px;
+}
+
+.email-box{
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<div class="icon">
+✓
 </div>
-</div></body></html>
+
+<div class="title">
+Pembelian Tiket<br>
+Berhasil
+</div>
+
+<div class="status">
+STATUS: SUKSES
+</div>
+
+<div class="desc">
+
+Terima kasih. Pembelian tiket Anda telah berhasil diproses.
+
+E-Ticket dan detail pemesanan telah berhasil dikirim ke alamat Gmail yang Anda daftarkan.
+
+</div>
+
+<div class="email-box">
+
+📩 Silakan cek folder <b>Kotak Masuk (Inbox)</b> atau folder <b>Spam</b> pada akun Gmail yang didaftarkan.
+
+<br><br>
+
+Jika email belum ditemukan, tunggu beberapa menit lalu lakukan refresh pada Gmail Anda.
+
+</div>
+
+<div class="note">
+
+Mohon simpan E-Ticket dan Order ID Anda untuk keperluan check-in dan verifikasi saat acara berlangsung.
+
+</div>
+
+<a href="#" class="button">
+SELESAI
+</a>
+
+</div>
+
+</body>
+</html>
